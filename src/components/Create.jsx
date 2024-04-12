@@ -1,11 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
-const Create = ({ createData, handleChange }) => {
+const Create = () => {
 
     const navigate = useNavigate()
+    const [createData, setCreateData] = useState({
+        name: "",
+        email: ""
+      })
+    
+      const handleChange = (e) => {
+    
+        setCreateData({ ...createData, [e.target.name]: e.target.value })
+      }
 
     const handleClick = (e) => {
         e.preventDefault()

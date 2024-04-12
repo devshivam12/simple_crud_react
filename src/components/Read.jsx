@@ -29,6 +29,12 @@ const Read = () => {
 
     <div className="container mt-4">
       <div className="row justify-content-center">
+        <div className='d-flex '>
+          <h2>Read operation</h2>
+          <Link to='/'>
+            <button className='btn btn-success '>Add data</button>
+          </Link>
+        </div>
         <div className="col">
           <table className="table table-bordered">
             <thead>
